@@ -1,0 +1,97 @@
+Logical Reasoning:
+
+##Task 0
+
+Logical Reasoning:
+
+1. swap_ints function:
+   - Purpose: Swap two integers in an array.
+   - Parameters:
+     - a: The first integer to swap.
+     - b: The second integer to swap.
+   - Steps:
+     1. Store the value of the first integer in a temporary variable.
+     2. Update the value of the first integer with the value of the second integer.
+     3. Update the value of the second integer with the value stored in the temporary variable.
+
+2. bubble_sort function:
+   - Purpose: Sort an array of integers in ascending order using the bubble sort algorithm.
+   - Parameters:
+     - array: An array of integers to sort.
+     - size: The size of the array.
+   - Steps:
+     1. Check if the array is NULL or if its size is less than 2; if so, return.
+     2. Initialize a boolean variable "bubbly" to track whether any swaps were made in the current pass.
+     3. Iterate through the array until no swaps are made in a pass:
+        a. Set "bubbly" to true at the beginning of each pass.
+        b. Iterate through the array from index 0 to size - 2:
+           i. If the current element is greater than the next element:
+              - Swap the current element with the next element using the swap_ints function.
+              - Print the array after each swap.
+              - Set "bubbly" to false to indicate that a swap was made.
+     4. Decrease the length of the array by 1 for each pass to optimize the sorting process.
+
+This logic describes the purpose and steps of the provided functions for swapping integers in an array and sorting the array using the bubble sort algorithm.
+
+
+1. swap_nodes function:
+   - Purpose: Swap two nodes in a doubly linked list.
+   - Parameters:
+     - h: A pointer to the head of the doubly-linked list.
+     - n1: A pointer to the first node to swap.
+     - n2: The second node to swap.
+   - Steps:
+     1. Update the next pointer of n1 to point to n2's next node.
+     2. If n2 has a next node, update its previous pointer to point to n1.
+     3. Update n2's prev pointer to point to n1's prev node.
+     4. Update n2's next pointer to point to n1.
+     5. If n1 has a previous node, update its next pointer to point to n2.
+     6. If n1 is the head of the list, update the head pointer to point to n2.
+     7. Update n1's prev pointer to point to n2's prev node.
+     8. Update the reference to n1 to point to n2's prev node.
+
+2. insertion_sort_list function:
+   - Purpose: Sort a doubly linked list of integers using the insertion sort algorithm.
+   - Parameters:
+     - list: A pointer to the head of a doubly-linked list of integers.
+   - Steps:
+     1. Check if the list is empty or contains only one node; if so, return.
+     2. Iterate through the list starting from the second node:
+        a. Store the next node of the current node in a temporary variable.
+        b. Initialize an insert pointer to the previous node of the current node.
+        c. While the insert pointer is not NULL and the value of the current node is less than the value of the insert node:
+           i. Swap the current node with the insert node using the swap_nodes function.
+           ii. Print the list after each swap.
+     3. Repeat until all nodes are traversed and sorted.
+
+This logic describes the purpose and steps of the provided functions for swapping nodes in a doubly linked list and sorting the list using the insertion sort algorithm.
+
+##Task 2
+
+Logical Reasoning:
+
+1. swap_ints function:
+   - Purpose: Swap two integers in an array.
+   - Parameters:
+     - a: The first integer to swap.
+     - b: The second integer to swap.
+   - Steps:
+     1. Store the value of the first integer in a temporary variable.
+     2. Update the value of the first integer with the value of the second integer.
+     3. Update the value of the second integer with the value stored in the temporary variable.
+
+2. selection_sort function:
+   - Purpose: Sort an array of integers in ascending order using the selection sort algorithm.
+   - Parameters:
+     - array: An array of integers to sort.
+     - size: The size of the array.
+   - Steps:
+     1. Check if the array is NULL or if its size is less than 2; if so, return.
+     2. Iterate through the array, selecting the minimum element in each pass:
+        - Initialize a pointer "min" to the current element.
+        - Iterate through the remaining elements in the array:
+           - If the current element is smaller than the current minimum, update "min" to point to the current element.
+        - If the current minimum is not the same as the current element:
+           - Swap the current element with the minimum element using the swap_ints function.
+           - Print the array after each swap.
+     3. Repeat until the entire array is sorted.
